@@ -45,6 +45,7 @@ export const useAuth = () => {
         enabled: isAuthenticated,
         staleTime: 5 * 60 * 1000, // 5 minutes
         retry: 1,
+
     });
 
     // Logout mutation

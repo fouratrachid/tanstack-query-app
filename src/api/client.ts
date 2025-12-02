@@ -3,7 +3,7 @@ import { useAuthStore } from '../store/auth.store';
 import type { ApiError, RefreshTokenResponse } from '../types/auth.types';
 
 // Replace with your actual API URL
-const API_URL = 'https://your-api.com/api';
+const API_URL = 'https://0ec6531bc394.ngrok-free.app/api';
 
 export const apiClient = axios.create({
     baseURL: API_URL,

@@ -1,8 +1,9 @@
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
+import { Text } from "react-native";
 
 export default function AppLayout() {
   return (
-    <Stack
+    <Tabs
       screenOptions={{
         headerShown: true,
         headerStyle: {
@@ -12,14 +13,27 @@ export default function AppLayout() {
         headerTitleStyle: {
           fontWeight: "bold",
         },
+        tabBarActiveTintColor: "#007AFF",
+        tabBarInactiveTintColor: "#8E8E93",
       }}
     >
-      <Stack.Screen
+      <Tabs.Screen
         name="home"
         options={{
           title: "Home",
+          tabBarLabel: "Home",
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>🏠</Text>,
         }}
       />
-    </Stack>
+      <Tabs.Screen
+        name="posts"
+        options={{
+          title: "Posts",
+          tabBarLabel: "Posts",
+          tabBarIcon: ({ color }) => <Text style={{ fontSize: 24 }}>📝</Text>,
+          headerShown: false,
+        }}
+      />
+    </Tabs>
   );
 }
